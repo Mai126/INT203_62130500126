@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic Vue Js - HelloWorld App</title>
+      
+        <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+        <!-- Using via Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      
+        <!-- https://tailwindcss.com/docs/installation -->
+        <!-- Using Tailwind via CDN -->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      
+        <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+        <!-- Vue CDN -->
+        <script src="https://unpkg.com/vue@next"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"/>
+        
+        <link rel="stylesheet" href="style.css" />
+      
+</head>
+<body>
+    <div class="bg-gray-50">
+ 
+<header class="w-full bg-white p-4 justify-between items-center">
+    <nav class="flex items-center">
+            <div class="w-1/5">
+                <a href="#" class="mr-6"><i class="fa fa-bars fa-1x " aria-hidden="true" ></i></a>
+                <a href="#" >
+                <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
+                <span class="text-black font-bold tracking-tight">Premium<sup class="text-gray-600"> TH</sup></span>
+                </a>
+            </div>
+
+            <div class="w-3/5">
+                <div class="relative flex w-full justify-center ">
+                    <input type="text" class=" w-full  border mr-0  text-sm text-gray-800 border-gray-400" placeholder="  Search">
+                    <button type="submit" class="px-8 bg-gray-100 text-gray-800  uppercase border-gray-400 border-t border-b border-r">
+                        <a>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </button>
+              
+                </div>
+            </div>
+            <div class="w-1/5">
+                <a href="#"class="ml-4"><i class="fa fa-microphone fa-1x" aria-hidden="true"></i></a>
+            </div>
+            <div class ="">
+                <div class="flex items-center justify-end">
+                <a href="#" class="mr-6"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <a href="#" class="mr-6"><i class="fa fa-th" aria-hidden="true"></i></a>
+                <a href="#" class="mr-6"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                <a href="#"><img src="./images/profile.JPEG" class="rounded-full w-14"></a>
+            </div>
+        </div>
+    
+</nav>
+</header>
+
+<main class="flex w-full h-screen">
+    <aside class="w-60 h-screen  bg-white shadow-md w-fulll hidden sm:block">
+        <div class="flex flex-col justify-between h-screen  bg-white" >
+            <div class="text-xs space-y-2  ">
+                <a href="#">
+                <div class="bg-gray-200 ">
+                   
+                    <i class="py-1 align-middle ml-4 home material-icons">
+                        home
+                    </i>
+                    <span class=" ml-6  font-semibold tracking-tighter align-middle ">Home</span>
+                
+            </div>
+        </a>
+        <a href="#">
+                <div class="">
+                    <i class="py-1 align-middle ml-4 fire material-icons">
+                        local_fire_department
+                    </i>
+                <span class="  ml-6 font-normal  tracking-tighter  ">Trending</span>
+                </div>
+                </a>
+                <a href="#">
+                <div>
+                    <i class="py-1 align-middle ml-4 sub material-icons">
+                        subscriptions
+                    </i>
+                <span class="  ml-6 font-normal tracking-tighter ">Subscriptions</span>
+                </div>
+                </a>
+                <a href="#">
+                <div>
+                    <i class=" py-1 align-middle ml-4 im im-youtube origin"></i>
+                <span class="  ml-6 font-normal  tracking-tighter ">Originals</span>
+                </div>
+                </a>
+                <a href="#">
+                <div>
+                    <i class="py-1 align-middle ml-4 material-icons music">
+                        play_circle_filled
+                    </i>
+                <span class="  ml-6 font-normal  tracking-tighter ">Youtube Music</span>
+               </div>
+               </a>
+               
+            <div class="border-b-2 py-1">
+
+            </div>
+            <a href="#">
+            <div class=" ">
+                   
+                <i class=" py-1 align-middle ml-4 material-icons library">
+                    video_library
+                </i>
+                <span class=" ml-6 font-normal  tracking-tighter align-middle">Library</span>
+            
+        </div>
+        </a>
+        <a href="#">
+            <div class="">
+                <i class="py-1 align-middle ml-4  material-icons history">
+                    history
+                </i>
+            <span class="  ml-6 font-normal  tracking-tighter  ">History</span>
+            </div>
+            </a>
+            <a href="#">
+            <div>
+                <i class="py-1 align-middle ml-4 material-icons vdo ">
+                    movie
+                </i>
+            <span class="  ml-6 font-normal  tracking-tighter ">Your videos</span>
+            </div>
+            </a>
+            <a href="#">
+            <div>
+                <i class="py-1 align-middle ml-4 material-icons later">
+                    watch_later
+                </i>
+            <span class="  ml-6 font-normal  tracking-tighter ">Watch later</span>
+            </div>
+            </a>
+            <a href="#">
+            <div>
+                <i class="py-1 align-middle ml-4 material-icons like">
+                    thumb_up
+                </i>
+            <span class="  ml-6 font-normal tracking-tighter ">Liked videos</span>
+           </div>
+           </a>
+           
+        <div class="border-b-2 py-1">
+
+        </div>
+
+
+        <div class=" ">
+                   
+            <p class="py-1 align-middle ml-4 uppercase font-semibold text-gray-600">
+                subscriptions
+            </p>
+        
+        
+    </div>
+    <a href="#">
+        <div class="">
+            <i class="py-1 align-middle ml-4  material-icons ">
+                <img src="./images/workpoint.jpg" class="rounded-full w-6">
+            </i>
+        <span class="  ml-6 font-normal  tracking-tighter  ">WorkpointOfficial</span>
+        </div>
+        </a>
+        <a href="#">
+        <div>
+            <i class="py-1 align-middle ml-4 material-icons  ">
+                <img src="./images/alie.jpg" class="rounded-full w-6">
+            </i>
+        <span class="  ml-6 font-normal  tracking-tighter ">Alie Blackcobra</span>
+        </div>
+        </a>
+        <a href="#">
+        <div>
+            <i class="py-1 align-middle ml-4 material-icons ">
+                <img src="./images/gamgy.jpg" class="rounded-full w-6">
+            </i>
+        <span class="  ml-6 font-normal tracking-tighter ">Gamgy channel</span>
+        </div>
+        </a>
+        <a href="#">
+        <div>
+            <i class="py-1 align-middle ml-4 material-icons ">
+                <img src="./images/coco.jpg" class="rounded-full w-6">
+            </i>
+        <span class="  ml-6 font-normal  tracking-tighter ">Coco Riley</span>
+       </div>
+       </a>
+       <a href="#">
+       <div>
+        <i class="py-1 align-middle ml-4 material-icons ">
+            <img src="./images/hiwhee.jpg" class="rounded-full w-6">
+        </i>
+    <span class="  ml-6 font-normal  tracking-tighter ">Hiwwhee Official</span>
+   </div>
+   </a>
+   <a href="#">
+   <div>
+    <i class="py-1 align-middle ml-4 material-icons browse">
+        add_circle
+    </i>
+<span class="  ml-6 font-normal tracking-tighter ">Browse channels</span>
+</div>
+</a>
+   
+   
+
+
+               
+
+                </div>
+               
+               
+            </div>
+
+        
+
+    </aside>
+    <section class="w-full p-4">
+        <div class="first ">
+    
+            <div class="flex mb-4 relative">
+                <div class="flex-1 mr-1">
+                    <div >
+                        <img src="./images/ohana.jpg" alt="">
+                    </div>
+                    <div class=" mb-4 ">
+                        <span class="flex mb-2">
+                        <i class=" pt-2 align-middle  material-icons like">
+                            <img src="./images/ohn.jpg" class="rounded-full w-8">
+                        </i>
+                        <div class ="ml-3">
+                        <span class=" text-sm font-semibold tracking-tighter ">ครัวไรอ่ะ EP.80 : ต้มยำกัญชาแมว</span>
+            </span>
+                        <p class="mt-1 font-hairline text-xs text-gray-600">
+                            ohana clip <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            
+                        </p>
+                        <p class=" font-hairline text-xs text-gray-600">
+                            129K views &middot; 3 hours ago
+                        </p>
+                       
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 mr-1">
+                    <div>
+                        <img src="./images/gu.jpg" alt="">
+                    </div>
+                    <div class=" mb-4 ">
+                        <span class="flex  mb-2">
+                        <i class=" pt-2 align-middle  material-icons like">
+                            <img src="./images/guc.jpg" class="rounded-full w-8">
+                        </i>
+                        <div class ="ml-3">
+                        <span class="  text-sm font-semibold tracking-tighter ">เมื่อสองสาวติดอยู่บนบอลลูน.. กลับไม่ได้</span>
+            </span>
+            <p class="mt-1 font-hairline text-xs text-gray-600">
+                GU channel
+                
+            </p>
+            <p class=" font-hairline text-xs text-gray-600">
+                337K views &middot; 2 months ago
+            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 mr-1">
+                    <div>
+                        <img src="./images/smile.jpg" alt="">
+                    </div>
+                    <div class=" mb-4 ">
+                        <span class="flex  mb-2">
+                        <i class=" pt-2 align-middle  material-icons like">
+                            <img src="./images/yo.jpg" class="rounded-full w-8">
+                        </i>
+                        <div class ="ml-3">
+                        <span class="  text-sm font-semibold tracking-tighter ">พระจันทร์ยิ้ม - เอก สุรเชษฐ์(Cover)</span>
+            </span>
+            <p class="mt-1 font-hairline text-xs text-gray-600">
+                YOONG
+                
+            </p>
+            <p class=" font-hairline text-xs text-gray-600">
+                3.1M views &middot; 2 months ago
+            </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex-1 mr-1">
+                    <div>
+                        <img src="./images/tmr.jpg" alt="">
+                    </div>
+                    <div class=" mb-4 ">
+                        <span class="flex  mb-2">
+                        <i class=" pt-2 align-middle  material-icons like">
+                            <img src="./images/white.jpg" class="rounded-full w-8">
+                        </i>
+                        <div class ="ml-3">
+                        <span class=" text-sm font-semibold tracking-tighter ">พรุ่งนี้ค่อย... (CHEATDAY) - ป๊อบ  </span>
+            </span>
+            <p class="mt-1 font-hairline text-xs text-gray-600">
+                OfficialWhiteMusic <i class="fa fa-check-circle" aria-hidden="true"></i>
+                
+                
+            </p>
+            <p class=" font-hairline text-xs text-gray-600">
+                15M views &middot; 1 year ago
+            </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second">
+    
+                <div class="flex mb-4 relative">
+                    <div class="flex-1 mr-1">
+                        <div >
+                            <img src="./images/bie39.jpg" alt="">
+                        </div>
+                        <div class=" mb-4 ">
+                            <span class="flex mb-2">
+                            <i class=" pt-2 align-middle  material-icons like">
+                                <img src="./images/bie.jpg" class="rounded-full w-8">
+                            </i>
+                            <div class ="ml-3">
+                            <span class=" text-sm font-semibold tracking-tighter ">ทำเองกินเอง EP.39 โดนัททองคำ</span>
+                </span>
+                            <p class="mt-1 font-hairline text-xs text-gray-600">
+                                Bie The Ska <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </p>
+                            <p class=" font-hairline text-xs text-gray-600">
+                                409K views &middot; 11 hours ago
+                            </p>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 mr-1">
+                        <div>
+                            <img src="./images/gamgy2.jpg" alt="">
+                        </div>
+                        <div class=" mb-4 ">
+                            <span class="flex  mb-2">
+                            <i class=" pt-2 align-middle  material-icons like">
+                                <img src="./images/gamgy.jpg" class="rounded-full w-8">
+                            </i>
+                            <div class ="ml-3">
+                            <span class="  text-sm font-semibold tracking-tighter ">Home Tour Ep.2 อัปเดตส่วน..</span>
+                </span>
+                <p class="mt-1 font-hairline text-xs text-gray-600">
+                    Gamgy channel
+                    
+                </p>
+                <p class=" font-hairline text-xs text-gray-600">
+                    40.1K views &middot; 6 hours ago
+                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 mr-1">
+                        <div>
+                            <img src="./images/pig.jpg" alt="">
+                        </div>
+                        <div class=" mb-4 ">
+                            <span class="flex  mb-2">
+                            <i class=" pt-2 align-middle  material-icons like">
+                                <img src="./images/ajummsa.jpg" class="rounded-full w-8">
+                            </i>
+                            <div class ="ml-3">
+                            <span class="  text-sm font-semibold tracking-tighter ">" ขาหมูแช่เย็น " เด้งๆ ดึ้งๆ เหมือน </span>
+                </span>
+                <p class="mt-1 font-hairline text-xs text-gray-600">
+                    Ajumma Nammy <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    
+                </p>
+                <p class=" font-hairline text-xs text-gray-600">
+                    333K views &middot; 2 days ago
+                </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 mr-1">
+                        <div>
+                            <img src="./images/xzom5ba.jpg" alt="">
+                        </div>
+                        <div class=" mb-4 ">
+                            <span class="flex  mb-2">
+                            <i class=" pt-2 align-middle  material-icons like">
+                                <img src="./images/zom.jpg" class="rounded-full w-8">
+                            </i>
+                            <div class ="ml-3">
+                            <span class=" text-sm font-semibold tracking-tighter ">กล่องสุ่ม 5 บาท จัดหนัก 100 กล่อง  </span>
+                </span>
+                <p class="mt-1 font-hairline text-xs text-gray-600">
+                    zommarie <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    
+                </p>
+                <p class=" font-hairline text-xs text-gray-600">
+                    109K views &middot; 8 hours ago
+                </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="border-t-4">
+                <h3 class="pt-4 text-base font-semibold">Latest YouTube Posts</h3>
+                <div class="grid grid-cols-9 gap-4">
+                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
+                        <div class="flex flex-row bg-white shadow-sm p-4">
+                            <i class=" align-middle ">
+                                <img src="./images/moto.jpg" class="rounded-full w-6">
+                    </i>
+                    <div class ="ml-3">
+                <p class=" mt-1 font-hairline text-xs text-gray-600 ">Moto Plaza &middot; 4 hours ago </p>
+                <p class=" font-hairline text-xs ">
+                    ไม่มีอะไรอยู่เราได้ตลอด
+                 </p>
+                 <i class="fa fa-thumbs-up" aria-hidden="true"> <span class="font-hairline text-xs text-gray-600">425 &nbsp;&nbsp;</span><i class="fa fa-thumbs-down" aria-hidden="true"></i></i>
+                         </div>
+            </div>
+                    
+
+                    </div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
+                        <div class="flex flex-row bg-white shadow-sm p-4">
+                            <i class=" align-middle ">
+                                <img src="./images/djdream.jpg" class="rounded-full w-6">
+                    </i>
+                    <div class ="ml-3">
+                <p class=" mt-1 font-hairline text-xs text-gray-600 ">DJ.DREAMERTH &middot; 13 hours ago </p>
+                <p class=" font-hairline text-xs ">
+                    หัวฟ้า
+                 </p>
+                 <i class="fa fa-thumbs-up" aria-hidden="true"> <span class="font-hairline text-xs text-gray-600">12K &nbsp;&nbsp;</span><i class="fa fa-thumbs-down" aria-hidden="true"></i></i>
+                         </div>
+            </div>
+                    
+
+                    </div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
+                        <div class="flex flex-row bg-white shadow-sm p-4">
+                            <i class=" align-middle ">
+                                <img src="./images/kt.jpg" class="rounded-full w-6">
+                    </i>
+                    <div class ="ml-3">
+                <p class=" mt-1 font-hairline text-xs text-gray-600 ">Kyutae Oppa &middot; 4 days ago </p>
+                <p class=" font-hairline text-xs ">
+                    ใครถ่ายไม่หล่อ
+                 </p>
+                 <i class="fa fa-thumbs-up" aria-hidden="true"> <span class="font-hairline text-xs text-gray-600">30K &nbsp;&nbsp;</span><i class="fa fa-thumbs-down" aria-hidden="true"></i></i>
+                         </div>
+            </div>
+                    
+
+                    </div>
+
+                    
+
+                    </div>
+            </div>
+                
+                 
+        </section>
+        
+    
+</main>
+</div>
+
+    <!-- my main.js -->
+  <script src="./main.js"></script>
+    
+</body>
+</html>
