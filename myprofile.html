@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Vue Js - HelloWorld App</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app" class="p-8">
+  <div class="py-12 h-screen bg-gray-300">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-md">
+        <div class="md:flex">
+            <div class="w-full p-2 py-10">
+                <div class="flex justify-center">
+                    <div class="relative"> <img v-bind:src="image" class="rounded-full" width="80"> <span class="absolute border-white border-4 h-5 w-5 top-12 left-16 bg-green-700 rounded-full"></span> </div>
+                </div>
+                <div class="flex flex-col text-center mt-3 mb-4"> <span class="text-2xl font-medium">{{firstname}} {{lastname}}</span> <span class="text-md text-gray-400">{{msg}}</span> </div>
+                <p class="px-16 text-center text-md text-gray-800">{{faculty}} </a>{{ID}}</p>
+                <div class="px-16 mt-3 text-center"> <span class="bg-gray-100 h-5 p-1 px-3 rounded cursor-pointer hover:shadow hover:bg-gray-200">#int203</span> <span class="bg-gray-100 h-5 p-1 px-3 rounded cursor-pointer hover:shadow hover:bg-gray-200">#kmutt</span> <span class="bg-gray-100 h-5 p-1 px-3 rounded cursor-pointer hover:shadow hover:bg-gray-200">#it</span> </div>
+                <div class="d-flex text-center justify-content-center mt-4 ">
+                  <ul class="list-icons">
+                    <a v-bind:href="url"><li class="facebook"> <i class="fa fa-facebook"></i></li></a>
+                    <a v-bind:href="url3"><li class="youtube"> <i class="fa fa-youtube"></i></li></a>
+                  <a v-bind:href="url2"><li class="instagram"> <i class="fa fa-instagram"></i></li></a>
+              </ul></div>
+                <div class="px-14 mt-2"> <button class="h-12 bg-gray-200 w-full text-black text-md rounded hover:shadow hover:bg-gray-300 mb-2">Message</button> 
+                  
+                  <button class="h-12 bg-blue-700 w-full text-white text-md rounded hover:shadow hover:bg-blue-800">Follow</button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+
+  <!-- my main.js -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
